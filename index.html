@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prometric Practice Test – EASY TIE-BREAKER</title>
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+.question { margin-bottom: 15px; }
+.options label { display: block; }
+button { margin-top: 15px; padding: 10px 20px; }
+.result { margin-top: 20px; font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<h2>Prometric Practice Test – EASY TIE-BREAKER</h2>
+
+<label>Enter your name:</label>
+<input type="text" id="name" />
+<button onclick="startTest()">Start Test</button>
+
+<form id="test" style="display:none;">
+
+<!-- Q1 -->
+<div class="question">
+<p>1. A patient suddenly develops shortness of breath and low oxygen saturation. What is the priority nursing action?</p>
+<div class="options">
+<label><input type="radio" name="q1" value="correct"> Assess airway and apply oxygen immediately</label>
+<label><input type="radio" name="q1"> Notify the physician</label>
+<label><input type="radio" name="q1"> Document the finding</label>
+<label><input type="radio" name="q1"> Prepare medication</label>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="question">
+<p>2. Before administering IV medication, what should the nurse do first?</p>
+<div class="options">
+<label><input type="radio" name="q2" value="correct"> Verify the medication order and patient identity</label>
+<label><input type="radio" name="q2"> Explain side effects</label>
+<label><input type="radio" name="q2"> Administer slowly</label>
+<label><input type="radio" name="q2"> Document administration</label>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="question">
+<p>3. A patient becomes suddenly unresponsive. What action should be taken immediately?</p>
+<div class="options">
+<label><input type="radio" name="q3" value="correct"> Call for help and assess airway and breathing</label>
+<label><input type="radio" name="q3"> Check the medical record</label>
+<label><input type="radio" name="q3"> Inform the family</label>
+<label><input type="radio" name="q3"> Obtain vital signs later</label>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="question">
+<p>4. Active bleeding is noted at a surgical site. What is the priority action?</p>
+<div class="options">
+<label><input type="radio" name="q4" value="correct"> Apply direct pressure to the site</label>
+<label><input type="radio" name="q4"> Change the dressing later</label>
+<label><input type="radio" name="q4"> Document the bleeding</label>
+<label><input type="radio" name="q4"> Notify the physician</label>
+</div>
+</div>
+
+<!-- Q5 -->
+<div class="question">
+<p>5. An oxygen tubing becomes disconnected and the alarm is sounding. What should the nurse do first?</p>
+<div class="options">
+<label><input type="radio" name="q5" value="correct"> Reconnect the oxygen tubing immediately</label>
+<label><input type="radio" name="q5"> Silence the alarm</label>
+<label><input type="radio" name="q5"> Check the chart</label>
+<label><input type="radio" name="q5"> Report the incident</label>
+</div>
+</div>
+
+<button type="button" onclick="submitTest()">Submit Test</button>
+</form>
+
+<div class="result" id="result"></div>
+
+<script>
+function startTest() {
+  document.getElementById("test").style.display = "block";
+}
+
+function submitTest() {
+  let score = 0;
+  let unsafe = 0;
+  let correct = document.querySelectorAll('input[value="correct"]:checked').length;
+  let total = 5;
+  score = correct;
+  unsafe = total - correct;
+
+  document.getElementById("result").innerHTML =
+    "Name: " + document.getElementById("name").value +
+    "<br>Score: " + score + "/" + total +
+    "<br>Unsafe Errors: " + unsafe;
+}
+</script>
+
+</body>
+</html>
