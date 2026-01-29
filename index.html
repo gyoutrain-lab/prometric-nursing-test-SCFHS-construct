@@ -2,597 +2,898 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Prometric Practice Test – EASY TIE-BREAKER</title>
+<title>Prometric Practice Test – Easy Tie-Breaker</title>
 <style>
-body { font-family: Arial, sans-serif; padding: 20px; }
-.question { margin-bottom: 15px; }
-.options label { display: block; }
-button { margin-top: 15px; padding: 10px 20px; }
-.result { margin-top: 20px; font-weight: bold; }
+body { font-family: Arial, sans-serif; max-width: 720px; padding: 20px; }
+.question { font-size: 18px; margin-bottom: 10px; }
+.options label { display: block; margin: 6px 0; cursor: pointer; }
+.status { margin-top: 10px; font-weight: bold; }
+.unsafe { color: red; }
+.correct { color: green; }
+.rationale { margin-top: 8px; font-size: 14px; }
+button { margin-top: 14px; padding: 6px 14px; }
 </style>
 </head>
-
 <body>
 
-<h2>Prometric Practice Test – EASY TIE-BREAKER</h2>
-
-<label>Enter your name:</label>
-<input type="text" id="name" />
-<button onclick="startTest()">Start Test</button>
-
-<form id="test" style="display:none;">
+<h3>Prometric Practice Test</h3>
 
 <!-- Q1 -->
-<div class="question">
-<p>1. A patient suddenly develops shortness of breath and low oxygen saturation. What is the priority nursing action?</p>
+<div class="question"><b>Q1.</b> Septic shock patient MAP 52 after adequate fluids. Best next step?</div>
 <div class="options">
-<label><input type="radio" name="q1" value="correct"> Assess airway and apply oxygen immediately</label>
-<label><input type="radio" name="q1"> Notify the physician</label>
-<label><input type="radio" name="q1"> Document the finding</label>
-<label><input type="radio" name="q1"> Prepare medication</label>
+<label><input type="radio" name="q1">A. Vasopressin only</label>
+<label><input type="radio" name="q1">B. Dobutamine</label>
+<label><input type="radio" name="q1">C. Phenylephrine</label>
+<label><input type="radio" name="q1" onclick="show('r1')">D. Norepinephrine</label>
 </div>
+<div id="r1" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Norepinephrine</div>
+<div class="rationale">Rationale: First-line vasopressor in septic shock to maintain MAP ≥65 mmHg.</div>
+<button>Next</button>
 </div>
 
 <!-- Q2 -->
-<div class="question">
-<p>2. Before administering IV medication, what should the nurse do first?</p>
+<div class="question"><b>Q2.</b> Patient suddenly develops stridor and cyanosis. First nursing action?</div>
 <div class="options">
-<label><input type="radio" name="q2" value="correct"> Verify the medication order and patient identity</label>
-<label><input type="radio" name="q2"> Explain side effects</label>
-<label><input type="radio" name="q2"> Administer slowly</label>
-<label><input type="radio" name="q2"> Document administration</label>
+<label><input type="radio" name="q2">A. Obtain chest X-ray</label>
+<label><input type="radio" name="q2">B. Administer bronchodilator</label>
+<label><input type="radio" name="q2" onclick="show('r2')">C. Open airway and apply oxygen</label>
+<label><input type="radio" name="q2">D. Notify physician</label>
 </div>
+<div id="r2" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Open airway and apply oxygen</div>
+<div class="rationale">Rationale: Airway obstruction with hypoxia requires immediate airway management.</div>
+<button>Next</button>
 </div>
 
 <!-- Q3 -->
-<div class="question">
-<p>3. A patient becomes suddenly unresponsive. What action should be taken immediately?</p>
+<div class="question"><b>Q3.</b> Oxygen saturation alarm sounds; patient appears restless. What is the priority action?</div>
 <div class="options">
-<label><input type="radio" name="q3" value="correct"> Call for help and assess airway and breathing</label>
-<label><input type="radio" name="q3"> Check the medical record</label>
-<label><input type="radio" name="q3"> Inform the family</label>
-<label><input type="radio" name="q3"> Obtain vital signs later</label>
+<label><input type="radio" name="q3">A. Silence the alarm</label>
+<label><input type="radio" name="q3">B. Document findings</label>
+<label><input type="radio" name="q3" onclick="show('r3')">C. Check oxygen connection and patient airway</label>
+<label><input type="radio" name="q3">D. Call respiratory therapy</label>
 </div>
+<div id="r3" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Check oxygen connection and patient airway</div>
+<div class="rationale">Rationale: Equipment disconnection or airway compromise must be corrected immediately.</div>
+<button>Next</button>
 </div>
 
 <!-- Q4 -->
-<div class="question">
-<p>4. Active bleeding is noted at a surgical site. What is the priority action?</p>
+<div class="question"><b>Q4.</b> Before administering insulin, what must the nurse do first?</div>
 <div class="options">
-<label><input type="radio" name="q4" value="correct"> Apply direct pressure to the site</label>
-<label><input type="radio" name="q4"> Change the dressing later</label>
-<label><input type="radio" name="q4"> Document the bleeding</label>
-<label><input type="radio" name="q4"> Notify the physician</label>
+<label><input type="radio" name="q4">A. Ask patient to eat</label>
+<label><input type="radio" name="q4">B. Prepare IV dextrose</label>
+<label><input type="radio" name="q4" onclick="show('r4')">C. Check blood glucose level</label>
+<label><input type="radio" name="q4">D. Verify allergy history</label>
 </div>
-</div>
-<!-- Q6 -->
-<div class="question">
-<p>6. A patient shows signs of respiratory distress and cyanosis. What should be done immediately?</p>
-<div class="options">
-<label><input type="radio" name="q6" value="correct"> Maintain airway and administer oxygen</label>
-<label><input type="radio" name="q6"> Notify the physician</label>
-<label><input type="radio" name="q6"> Obtain arterial blood gas</label>
-<label><input type="radio" name="q6"> Document the findings</label>
-</div>
+<div id="r4" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Check blood glucose level</div>
+<div class="rationale">Rationale: Insulin administration without glucose verification risks hypoglycemia.</div>
+<button>Next</button>
 </div>
 
-<!-- Q7 -->
-<div class="question">
-<p>7. Before blood transfusion, what is the priority nursing action?</p>
+<!-- Q5 -->
+<div class="question"><b>Q5.</b> IV pump alarm sounds; site is swollen and cool. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q7" value="correct"> Verify patient identity and blood product</label>
-<label><input type="radio" name="q7"> Start infusion slowly</label>
-<label><input type="radio" name="q7"> Explain procedure to patient</label>
-<label><input type="radio" name="q7"> Prepare emergency medication</label>
+<label><input type="radio" name="q5">A. Slow infusion rate</label>
+<label><input type="radio" name="q5">B. Restart pump</label>
+<label><input type="radio" name="q5" onclick="show('r5')">C. Stop infusion and remove IV</label>
+<label><input type="radio" name="q5">D. Elevate extremity later</label>
 </div>
+<div id="r5" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop infusion and remove IV</div>
+<div class="rationale">Rationale: IV infiltration requires immediate cessation to prevent tissue injury.</div>
+<button>Next</button>
+</div>
+<div class="question"><b>Q21.</b> Patient suddenly becomes confused and has slurred speech. Priority nursing action?</div>
+<div class="options">
+<label><input type="radio" name="q21">A. Check blood glucose later</label>
+<label><input type="radio" name="q21">B. Reorient patient verbally</label>
+<label><input type="radio" name="q21" onclick="show('r21')">C. Activate stroke protocol immediately</label>
+<label><input type="radio" name="q21">D. Document neurological findings</label>
+</div>
+<div id="r21" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Activate stroke protocol immediately</div>
+<div class="rationale">Rationale: Sudden neurologic deficits require immediate stroke response to prevent permanent injury.</div>
+<button>Next</button>
 </div>
 
-<!-- Q8 -->
-<div class="question">
-<p>8. A patient suddenly becomes confused and disoriented. What is the next step?</p>
+<!-- Q22 -->
+<div class="question"><b>Q22.</b> Patient with active GI bleeding is dizzy and hypotensive. First nursing intervention?</div>
 <div class="options">
-<label><input type="radio" name="q8" value="correct"> Assess vital signs and oxygenation</label>
-<label><input type="radio" name="q8"> Reorient the patient</label>
-<label><input type="radio" name="q8"> Notify the family</label>
-<label><input type="radio" name="q8"> Document behavior</label>
+<label><input type="radio" name="q22">A. Administer oral fluids</label>
+<label><input type="radio" name="q22">B. Obtain stool sample</label>
+<label><input type="radio" name="q22" onclick="show('r22')">C. Place patient supine and start IV fluids</label>
+<label><input type="radio" name="q22">D. Prepare for endoscopy later</label>
 </div>
+<div id="r22" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Place patient supine and start IV fluids</div>
+<div class="rationale">Rationale: Hypotension and dizziness indicate shock requiring immediate circulation support.</div>
+<button>Next</button>
 </div>
 
-<!-- Q9 -->
-<div class="question">
-<p>9. An IV site is swollen and cool to touch. What should be done first?</p>
+<!-- Q23 -->
+<div class="question"><b>Q23.</b> Nurse prepares to give blood transfusion. What must be done first?</div>
 <div class="options">
-<label><input type="radio" name="q9" value="correct"> Stop the infusion immediately</label>
-<label><input type="radio" name="q9"> Apply warm compress</label>
-<label><input type="radio" name="q9"> Notify the physician</label>
-<label><input type="radio" name="q9"> Document the finding</label>
+<label><input type="radio" name="q23">A. Warm the blood unit</label>
+<label><input type="radio" name="q23">B. Prime tubing with saline</label>
+<label><input type="radio" name="q23" onclick="show('r23')">C. Verify patient identity and blood compatibility</label>
+<label><input type="radio" name="q23">D. Assess IV site patency later</label>
 </div>
+<div id="r23" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Verify patient identity and blood compatibility</div>
+<div class="rationale">Rationale: Verification prevents fatal transfusion reactions.</div>
+<button>Next</button>
 </div>
 
-<!-- Q10 -->
-<div class="question">
-<p>10. A patient with hypotension and tachycardia appears pale and clammy. What is the priority action?</p>
+<!-- Q24 -->
+<div class="question"><b>Q24.</b> Patient found on the floor after attempting to get out of bed. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q10" value="correct"> Position patient supine and assess circulation</label>
-<label><input type="radio" name="q10"> Obtain laboratory results</label>
-<label><input type="radio" name="q10"> Notify physician</label>
-<label><input type="radio" name="q10"> Reassure patient</label>
+<label><input type="radio" name="q24">A. Assist patient back to bed</label>
+<label><input type="radio" name="q24">B. Complete incident report</label>
+<label><input type="radio" name="q24" onclick="show('r24')">C. Assess for injury and level of consciousness</label>
+<label><input type="radio" name="q24">D. Notify family</label>
 </div>
+<div id="r24" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess for injury and level of consciousness</div>
+<div class="rationale">Rationale: Post-fall assessment is required before moving the patient.</div>
+<button>Next</button>
 </div>
 
-<!-- Q11 -->
-<div class="question">
-<p>11. A patient is at high risk for aspiration. What action should be taken immediately?</p>
+<!-- Q25 -->
+<div class="question"><b>Q25.</b> Patient develops sudden shortness of breath and chest pain. First action?</div>
 <div class="options">
-<label><input type="radio" name="q11" value="correct"> Elevate head of bed</label>
-<label><input type="radio" name="q11"> Consult speech therapist</label>
-<label><input type="radio" name="q11"> Provide oral care</label>
-<label><input type="radio" name="q11"> Document risk</label>
+<label><input type="radio" name="q25">A. Obtain ECG</label>
+<label><input type="radio" name="q25">B. Give pain medication</label>
+<label><input type="radio" name="q25" onclick="show('r25')">C. Apply oxygen and assess airway</label>
+<label><input type="radio" name="q25">D. Call physician after assessment</label>
 </div>
+<div id="r25" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply oxygen and assess airway</div>
+<div class="rationale">Rationale: Acute respiratory distress requires immediate oxygenation.</div>
+<button>Next</button>
 </div>
 
-<!-- Q12 -->
-<div class="question">
-<p>12. During a seizure, what is the nurse’s priority action?</p>
+<!-- Q26 -->
+<div class="question"><b>Q26.</b> Patient receiving IV antibiotics develops rash and wheezing. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q12" value="correct"> Protect airway and patient safety</label>
-<label><input type="radio" name="q12"> Restrain patient</label>
-<label><input type="radio" name="q12"> Insert oral airway</label>
-<label><input type="radio" name="q12"> Record duration</label>
+<label><input type="radio" name="q26">A. Slow infusion rate</label>
+<label><input type="radio" name="q26">B. Administer antihistamine later</label>
+<label><input type="radio" name="q26" onclick="show('r26')">C. Stop infusion and call for emergency help</label>
+<label><input type="radio" name="q26">D. Document allergic reaction</label>
 </div>
+<div id="r26" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop infusion and call for emergency help</div>
+<div class="rationale">Rationale: Signs of anaphylaxis require immediate cessation and emergency response.</div>
+<button>Next</button>
 </div>
 
-<!-- Q13 -->
-<div class="question">
-<p>13. A patient suddenly complains of chest tightness and shortness of breath. What should be done first?</p>
+<!-- Q27 -->
+<div class="question"><b>Q27.</b> Oxygen tubing found disconnected in a sleeping patient. First action?</div>
 <div class="options">
-<label><input type="radio" name="q13" value="correct"> Assess airway, breathing, and circulation</label>
-<label><input type="radio" name="q13"> Administer pain medication</label>
-<label><input type="radio" name="q13"> Notify physician</label>
-<label><input type="radio" name="q13"> Obtain ECG later</label>
+<label><input type="radio" name="q27">A. Notify respiratory therapy</label>
+<label><input type="radio" name="q27">B. Document finding</label>
+<label><input type="radio" name="q27" onclick="show('r27')">C. Reconnect oxygen and assess patient</label>
+<label><input type="radio" name="q27">D. Check vital signs later</label>
 </div>
+<div id="r27" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Reconnect oxygen and assess patient</div>
+<div class="rationale">Rationale: Disconnected oxygen is an immediate airway/breathing threat.</div>
+<button>Next</button>
 </div>
 
-<!-- Q14 -->
-<div class="question">
-<p>14. Before a sterile procedure, what is the priority nursing action?</p>
+<!-- Q28 -->
+<div class="question"><b>Q28.</b> Patient with seizure disorder becomes unresponsive. Priority nursing action?</div>
 <div class="options">
-<label><input type="radio" name="q14" value="correct"> Perform hand hygiene</label>
-<label><input type="radio" name="q14"> Prepare equipment</label>
-<label><input type="radio" name="q14"> Explain procedure</label>
-<label><input type="radio" name="q14"> Position patient</label>
+<label><input type="radio" name="q28">A. Restrain patient</label>
+<label><input type="radio" name="q28">B. Insert oral airway</label>
+<label><input type="radio" name="q28" onclick="show('r28')">C. Protect airway and turn patient to side</label>
+<label><input type="radio" name="q28">D. Call family</label>
 </div>
+<div id="r28" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Protect airway and turn patient to side</div>
+<div class="rationale">Rationale: Airway protection prevents aspiration during seizure activity.</div>
+<button>Next</button>
 </div>
 
-<!-- Q15 -->
-<div class="question">
-<p>15. A patient suddenly collapses in the hallway. What should the nurse do immediately?</p>
+<!-- Q29 -->
+<div class="question"><b>Q29.</b> Patient reports dizziness and has cold, clammy skin. Best immediate action?</div>
 <div class="options">
-<label><input type="radio" name="q15" value="correct"> Call for help and assess responsiveness</label>
-<label><input type="radio" name="q15"> Check medical record</label>
-<label><input type="radio" name="q15"> Notify family</label>
-<label><input type="radio" name="q15"> Document incident</label>
+<label><input type="radio" name="q29">A. Encourage oral fluids</label>
+<label><input type="radio" name="q29">B. Check glucose later</label>
+<label><input type="radio" name="q29" onclick="show('r29')">C. Assess vital signs and perfusion</label>
+<label><input type="radio" name="q29">D. Document symptoms</label>
 </div>
+<div id="r29" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess vital signs and perfusion</div>
+<div class="rationale">Rationale: Signs suggest shock requiring immediate assessment.</div>
+<button>Next</button>
 </div>
 
-<!-- Q16 -->
-<div class="question">
-<p>16. A urinary catheter is blocked and not draining. What is the first action?</p>
+<!-- Q30 -->
+<div class="question"><b>Q30.</b> Patient coughing while eating and unable to speak. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q16" value="correct"> Check tubing for kinks or obstruction</label>
-<label><input type="radio" name="q16"> Irrigate catheter</label>
-<label><input type="radio" name="q16"> Notify physician</label>
-<label><input type="radio" name="q16"> Replace catheter</label>
+<label><input type="radio" name="q30">A. Give water</label>
+<label><input type="radio" name="q30">B. Encourage deep breathing</label>
+<label><input type="radio" name="q30" onclick="show('r30')">C. Perform choking intervention</label>
+<label><input type="radio" name="q30">D. Call physician</label>
 </div>
+<div id="r30" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Perform choking intervention</div>
+<div class="rationale">Rationale: Inability to speak indicates airway obstruction requiring immediate action.</div>
+<button>Next</button>
 </div>
-
-<!-- Q17 -->
-<div class="question">
-<p>17. A patient has a fever and suspected infection. What is the priority action?</p>
+<div class="question"><b>Q41.</b> Post-operative patient suddenly becomes hypotensive and tachycardic. Priority nursing action?</div>
 <div class="options">
-<label><input type="radio" name="q17" value="correct"> Initiate infection control precautions</label>
-<label><input type="radio" name="q17"> Administer antipyretic</label>
-<label><input type="radio" name="q17"> Obtain cultures</label>
-<label><input type="radio" name="q17"> Document findings</label>
+<label><input type="radio" name="q41">A. Administer pain medication</label>
+<label><input type="radio" name="q41">B. Recheck vital signs in 15 minutes</label>
+<label><input type="radio" name="q41" onclick="show('r41')">C. Assess for bleeding and notify provider</label>
+<label><input type="radio" name="q41">D. Encourage oral fluids</label>
 </div>
-</div>
-
-<!-- Q18 -->
-<div class="question">
-<p>18. Oxygen saturation suddenly drops to 86%. What should be done first?</p>
-<div class="options">
-<label><input type="radio" name="q18" value="correct"> Apply oxygen and assess breathing</label>
-<label><input type="radio" name="q18"> Notify physician</label>
-<label><input type="radio" name="q18"> Draw blood gas</label>
-<label><input type="radio" name="q18"> Recheck in 10 minutes</label>
-</div>
-</div>
-
-<!-- Q19 -->
-<div class="question">
-<p>19. A patient is actively vomiting and at risk for aspiration. What is the immediate action?</p>
-<div class="options">
-<label><input type="radio" name="q19" value="correct"> Turn patient to side</label>
-<label><input type="radio" name="q19"> Administer antiemetic</label>
-<label><input type="radio" name="q19"> Notify physician</label>
-<label><input type="radio" name="q19"> Document episode</label>
-</div>
-</div>
-
-<!-- Q20 -->
-<div class="question">
-<p>20. A patient reports sudden severe headache and slurred speech. What should the nurse do first?</p>
-<div class="options">
-<label><input type="radio" name="q20" value="correct"> Activate emergency response and assess ABC</label>
-<label><input type="radio" name="q20"> Administer pain medication</label>
-<label><input type="radio" name="q20"> Notify physician</label>
-<label><input type="radio" name="q20"> Obtain history</label>
-</div>
-</div>
-<!-- Q41 -->
-<div class="question">
-<p>41. A patient is found with a weak pulse and hypotension. What is the priority nursing action?</p>
-<div class="options">
-<label><input type="radio" name="q41" value="correct"> Assess circulation and initiate emergency support</label>
-<label><input type="radio" name="q41"> Notify the physician</label>
-<label><input type="radio" name="q41"> Obtain laboratory tests</label>
-<label><input type="radio" name="q41"> Document vital signs</label>
-</div>
+<div id="r41" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess for bleeding and notify provider</div>
+<div class="rationale">Rationale: Hypotension and tachycardia post-op suggest hemorrhage requiring immediate action.</div>
+<button>Next</button>
 </div>
 
 <!-- Q42 -->
-<div class="question">
-<p>42. Before administering insulin, what should the nurse do first?</p>
+<div class="question"><b>Q42.</b> Patient with pneumonia has RR 34/min and accessory muscle use. First action?</div>
 <div class="options">
-<label><input type="radio" name="q42" value="correct"> Check blood glucose level</label>
-<label><input type="radio" name="q42"> Prepare injection site</label>
-<label><input type="radio" name="q42"> Explain medication effects</label>
-<label><input type="radio" name="q42"> Document medication</label>
+<label><input type="radio" name="q42">A. Obtain sputum culture</label>
+<label><input type="radio" name="q42">B. Administer antibiotics</label>
+<label><input type="radio" name="q42" onclick="show('r42')">C. Apply oxygen and position upright</label>
+<label><input type="radio" name="q42">D. Notify physician after assessment</label>
 </div>
+<div id="r42" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply oxygen and position upright</div>
+<div class="rationale">Rationale: Signs of respiratory distress require immediate oxygenation and positioning.</div>
+<button>Next</button>
 </div>
 
 <!-- Q43 -->
-<div class="question">
-<p>43. A patient suddenly becomes short of breath with audible wheezing. What is the immediate action?</p>
+<div class="question"><b>Q43.</b> Nurse finds central line dressing loose and contaminated. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q43" value="correct"> Assess airway and breathing immediately</label>
-<label><input type="radio" name="q43"> Administer oral medication</label>
-<label><input type="radio" name="q43"> Notify physician</label>
-<label><input type="radio" name="q43"> Obtain chest x-ray</label>
+<label><input type="radio" name="q43">A. Reinforce dressing</label>
+<label><input type="radio" name="q43">B. Document finding</label>
+<label><input type="radio" name="q43" onclick="show('r43')">C. Change dressing using sterile technique</label>
+<label><input type="radio" name="q43">D. Notify physician</label>
 </div>
+<div id="r43" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Change dressing using sterile technique</div>
+<div class="rationale">Rationale: Central line contamination increases risk of bloodstream infection.</div>
+<button>Next</button>
 </div>
 
 <!-- Q44 -->
-<div class="question">
-<p>44. A patient receiving IV fluids complains of pain and swelling at the site. What should the nurse do first?</p>
+<div class="question"><b>Q44.</b> Patient receiving potassium infusion reports burning at IV site. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q44" value="correct"> Stop the IV infusion</label>
-<label><input type="radio" name="q44"> Apply cold compress</label>
-<label><input type="radio" name="q44"> Notify physician</label>
-<label><input type="radio" name="q44"> Document the finding</label>
+<label><input type="radio" name="q44">A. Reassure patient</label>
+<label><input type="radio" name="q44">B. Slow infusion rate</label>
+<label><input type="radio" name="q44" onclick="show('r44')">C. Stop infusion and assess IV site</label>
+<label><input type="radio" name="q44">D. Administer analgesic</label>
 </div>
+<div id="r44" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop infusion and assess IV site</div>
+<div class="rationale">Rationale: Potassium extravasation can cause severe tissue injury.</div>
+<button>Next</button>
 </div>
 
 <!-- Q45 -->
-<div class="question">
-<p>45. A patient is found on the floor after a fall. What is the nurse’s priority action?</p>
+<div class="question"><b>Q45.</b> Patient with fever and neutropenia enters room without mask. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q45" value="correct"> Assess the patient for injury</label>
-<label><input type="radio" name="q45"> Assist patient back to bed</label>
-<label><input type="radio" name="q45"> Notify physician</label>
-<label><input type="radio" name="q45"> Complete incident report</label>
+<label><input type="radio" name="q45">A. Obtain vital signs</label>
+<label><input type="radio" name="q45">B. Educate patient later</label>
+<label><input type="radio" name="q45" onclick="show('r45')">C. Apply mask and initiate protective isolation</label>
+<label><input type="radio" name="q45">D. Notify infection control</label>
 </div>
+<div id="r45" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply mask and initiate protective isolation</div>
+<div class="rationale">Rationale: Neutropenic patients require immediate infection-prevention measures.</div>
+<button>Next</button>
 </div>
 
 <!-- Q46 -->
-<div class="question">
-<p>46. A patient suddenly develops unequal pupils. What action should be taken immediately?</p>
+<div class="question"><b>Q46.</b> Patient suddenly becomes unresponsive with no pulse. First action?</div>
 <div class="options">
-<label><input type="radio" name="q46" value="correct"> Perform neurological assessment and escalate care</label>
-<label><input type="radio" name="q46"> Administer pain medication</label>
-<label><input type="radio" name="q46"> Reassure patient</label>
-<label><input type="radio" name="q46"> Document findings</label>
+<label><input type="radio" name="q46">A. Obtain ECG</label>
+<label><input type="radio" name="q46">B. Call family</label>
+<label><input type="radio" name="q46" onclick="show('r46')">C. Initiate CPR and activate code</label>
+<label><input type="radio" name="q46">D. Check blood pressure</label>
 </div>
+<div id="r46" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Initiate CPR and activate code</div>
+<div class="rationale">Rationale: Cardiac arrest requires immediate life-saving intervention.</div>
+<button>Next</button>
 </div>
 
 <!-- Q47 -->
-<div class="question">
-<p>47. A patient with a feeding tube begins coughing and choking. What should the nurse do first?</p>
+<div class="question"><b>Q47.</b> Patient with chest tube suddenly has no drainage and increased dyspnea. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q47" value="correct"> Stop feeding and assess airway</label>
-<label><input type="radio" name="q47"> Flush the tube</label>
-<label><input type="radio" name="q47"> Notify physician</label>
-<label><input type="radio" name="q47"> Document the event</label>
+<label><input type="radio" name="q47">A. Increase suction</label>
+<label><input type="radio" name="q47">B. Notify physician</label>
+<label><input type="radio" name="q47" onclick="show('r47')">C. Assess tubing for kinks or obstruction</label>
+<label><input type="radio" name="q47">D. Document findings</label>
 </div>
+<div id="r47" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess tubing for kinks or obstruction</div>
+<div class="rationale">Rationale: Obstructed chest tube compromises lung expansion.</div>
+<button>Next</button>
 </div>
 
 <!-- Q48 -->
-<div class="question">
-<p>48. A patient has cold, clammy skin and delayed capillary refill. What is the priority nursing action?</p>
+<div class="question"><b>Q48.</b> Patient complains of severe headache and unequal pupils. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q48" value="correct"> Assess for signs of shock and support circulation</label>
-<label><input type="radio" name="q48"> Obtain laboratory tests</label>
-<label><input type="radio" name="q48"> Notify physician</label>
-<label><input type="radio" name="q48"> Provide warm blankets</label>
+<label><input type="radio" name="q48">A. Give analgesic</label>
+<label><input type="radio" name="q48">B. Reassess in 30 minutes</label>
+<label><input type="radio" name="q48" onclick="show('r48')">C. Notify provider and prepare for emergency imaging</label>
+<label><input type="radio" name="q48">D. Document findings</label>
 </div>
+<div id="r48" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Notify provider and prepare for emergency imaging</div>
+<div class="rationale">Rationale: Signs indicate possible increased intracranial pressure.</div>
+<button>Next</button>
 </div>
 
 <!-- Q49 -->
-<div class="question">
-<p>49. Before a surgical procedure, what is the most important nursing action?</p>
+<div class="question"><b>Q49.</b> Patient with diabetes is diaphoretic and confused. First action?</div>
 <div class="options">
-<label><input type="radio" name="q49" value="correct"> Verify patient identity and procedure</label>
-<label><input type="radio" name="q49"> Shave surgical site</label>
-<label><input type="radio" name="q49"> Explain procedure</label>
-<label><input type="radio" name="q49"> Administer premedication</label>
+<label><input type="radio" name="q49">A. Administer insulin</label>
+<label><input type="radio" name="q49">B. Obtain urine ketones</label>
+<label><input type="radio" name="q49" onclick="show('r49')">C. Check blood glucose immediately</label>
+<label><input type="radio" name="q49">D. Notify physician</label>
 </div>
+<div id="r49" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Check blood glucose immediately</div>
+<div class="rationale">Rationale: Symptoms suggest hypoglycemia requiring rapid confirmation.</div>
+<button>Next</button>
 </div>
 
 <!-- Q50 -->
-<div class="question">
-<p>50. A patient suddenly loses consciousness. What should the nurse do immediately?</p>
+<div class="question"><b>Q50.</b> Patient receiving oxygen via mask removes it and becomes cyanotic. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q50" value="correct"> Call for help and assess airway and breathing</label>
-<label><input type="radio" name="q50"> Obtain vital signs later</label>
-<label><input type="radio" name="q50"> Notify family</label>
-<label><input type="radio" name="q50"> Document the event</label>
+<label><input type="radio" name="q50">A. Explain importance of oxygen</label>
+<label><input type="radio" name="q50">B. Notify physician</label>
+<label><input type="radio" name="q50" onclick="show('r50')">C. Reapply oxygen and assess breathing</label>
+<label><input type="radio" name="q50">D. Document behavior</label>
 </div>
+<div id="r50" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Reapply oxygen and assess breathing</div>
+<div class="rationale">Rationale: Cyanosis indicates hypoxia requiring immediate correction.</div>
+<button>Next</button>
 </div>
-
-<!-- Q51 -->
-<div class="question">
-<p>51. A patient’s oxygen mask becomes dislodged. What is the priority action?</p>
+<div class="question"><b>Q61.</b> Patient suddenly vomits large amounts of blood. Priority nursing action?</div>
 <div class="options">
-<label><input type="radio" name="q51" value="correct"> Reapply the oxygen mask immediately</label>
-<label><input type="radio" name="q51"> Check the oxygen order</label>
-<label><input type="radio" name="q51"> Notify physician</label>
-<label><input type="radio" name="q51"> Document the incident</label>
+<label><input type="radio" name="q61">A. Administer antiemetic</label>
+<label><input type="radio" name="q61">B. Obtain hemoglobin level</label>
+<label><input type="radio" name="q61" onclick="show('r61')">C. Position patient upright and maintain airway</label>
+<label><input type="radio" name="q61">D. Document amount of blood</label>
 </div>
-</div>
-
-<!-- Q52 -->
-<div class="question">
-<p>52. A patient develops a sudden fever and chills during transfusion. What should the nurse do first?</p>
-<div class="options">
-<label><input type="radio" name="q52" value="correct"> Stop the transfusion immediately</label>
-<label><input type="radio" name="q52"> Administer antipyretic</label>
-<label><input type="radio" name="q52"> Notify physician</label>
-<label><input type="radio" name="q52"> Document reaction</label>
-</div>
-</div>
-
-<!-- Q53 -->
-<div class="question">
-<p>53. A patient is at risk for falls and attempts to get out of bed alone. What should be done first?</p>
-<div class="options">
-<label><input type="radio" name="q53" value="correct"> Assist the patient and ensure safety measures</label>
-<label><input type="radio" name="q53"> Apply restraints</label>
-<label><input type="radio" name="q53"> Notify physician</label>
-<label><input type="radio" name="q53"> Document behavior</label>
-</div>
-</div>
-
-<!-- Q54 -->
-<div class="question">
-<p>54. A patient suddenly develops slurred speech and one-sided weakness. What is the immediate action?</p>
-<div class="options">
-<label><input type="radio" name="q54" value="correct"> Activate emergency response for stroke</label>
-<label><input type="radio" name="q54"> Administer pain medication</label>
-<label><input type="radio" name="q54"> Notify family</label>
-<label><input type="radio" name="q54"> Document findings</label>
-</div>
-</div>
-
-<!-- Q55 -->
-<div class="question">
-<p>55. Before administering any medication, what is the priority nursing responsibility?</p>
-<div class="options">
-<label><input type="radio" name="q55" value="correct"> Verify patient identity using two identifiers</label>
-<label><input type="radio" name="q55"> Explain medication purpose</label>
-<label><input type="radio" name="q55"> Prepare documentation</label>
-<label><input type="radio" name="q55"> Check expiration date later</label>
-</div>
-</div>
-
-<!-- Q56 -->
-<div class="question">
-<p>56. A patient has absent breath sounds on one side. What should the nurse do first?</p>
-<div class="options">
-<label><input type="radio" name="q56" value="correct"> Assess airway and breathing immediately</label>
-<label><input type="radio" name="q56"> Position patient comfortably</label>
-<label><input type="radio" name="q56"> Notify physician</label>
-<label><input type="radio" name="q56"> Document findings</label>
-</div>
-</div>
-
-<!-- Q57 -->
-<div class="question">
-<p>57. A patient is exposed to body fluids. What is the priority action?</p>
-<div class="options">
-<label><input type="radio" name="q57" value="correct"> Perform immediate hand hygiene and follow protocol</label>
-<label><input type="radio" name="q57"> Complete incident report</label>
-<label><input type="radio" name="q57"> Notify supervisor</label>
-<label><input type="radio" name="q57"> Document exposure</label>
-</div>
-</div>
-
-<!-- Q58 -->
-<div class="question">
-<p>58. A patient complains of dizziness and appears faint. What should the nurse do first?</p>
-<div class="options">
-<label><input type="radio" name="q58" value="correct"> Assist patient to a safe position and assess vitals</label>
-<label><input type="radio" name="q58"> Offer oral fluids</label>
-<label><input type="radio" name="q58"> Notify physician</label>
-<label><input type="radio" name="q58"> Document complaint</label>
-</div>
-</div>
-
-<!-- Q59 -->
-<div class="question">
-<p>59. A patient suddenly begins choking while eating. What is the immediate action?</p>
-<div class="options">
-<label><input type="radio" name="q59" value="correct"> Initiate choking intervention</label>
-<label><input type="radio" name="q59"> Call the physician</label>
-<label><input type="radio" name="q59"> Offer water</label>
-<label><input type="radio" name="q59"> Document the event</label>
-</div>
-</div>
-
-<!-- Q60 -->
-<div class="question">
-<p>60. A patient has rapidly worsening respiratory status. What should be done without delay?</p>
-<div class="options">
-<label><input type="radio" name="q60" value="correct"> Activate emergency response and support airway</label>
-<label><input type="radio" name="q60"> Obtain chest x-ray</label>
-<label><input type="radio" name="q60"> Notify physician</label>
-<label><input type="radio" name="q60"> Document assessment</label>
-</div>
-</div>
-
-<!-- Q61 -->
-<div class="question">
-<p>61. A patient with an IV line has fluid leaking at the insertion site. What is the first action?</p>
-<div class="options">
-<label><input type="radio" name="q61" value="correct"> Stop the IV infusion</label>
-<label><input type="radio" name="q61"> Apply dressing</label>
-<label><input type="radio" name="q61"> Notify physician</label>
-<label><input type="radio" name="q61"> Document finding</label>
-</div>
+<div id="r61" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Position patient upright and maintain airway</div>
+<div class="rationale">Rationale: Active bleeding with vomiting threatens airway and requires immediate protection.</div>
+<button>Next</button>
 </div>
 
 <!-- Q62 -->
-<div class="question">
-<p>62. A patient suddenly becomes agitated and confused. What should the nurse do first?</p>
+<div class="question"><b>Q62.</b> Patient receiving IV opioids becomes difficult to arouse. First action?</div>
 <div class="options">
-<label><input type="radio" name="q62" value="correct"> Assess oxygenation and vital signs</label>
-<label><input type="radio" name="q62"> Reorient patient</label>
-<label><input type="radio" name="q62"> Notify family</label>
-<label><input type="radio" name="q62"> Document behavior</label>
+<label><input type="radio" name="q62">A. Allow patient to rest</label>
+<label><input type="radio" name="q62">B. Decrease IV rate</label>
+<label><input type="radio" name="q62" onclick="show('r62')">C. Assess respiratory rate and oxygenation</label>
+<label><input type="radio" name="q62">D. Document sedation level</label>
 </div>
+<div id="r62" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess respiratory rate and oxygenation</div>
+<div class="rationale">Rationale: Opioids depress respiration; airway and breathing take priority.</div>
+<button>Next</button>
 </div>
 
 <!-- Q63 -->
-<div class="question">
-<p>63. Before inserting a urinary catheter, what is the priority nursing action?</p>
+<div class="question"><b>Q63.</b> Isolation room sign indicates airborne precautions. Nurse priority action before entry?</div>
 <div class="options">
-<label><input type="radio" name="q63" value="correct"> Perform hand hygiene and use sterile technique</label>
-<label><input type="radio" name="q63"> Position patient</label>
-<label><input type="radio" name="q63"> Explain procedure</label>
-<label><input type="radio" name="q63"> Prepare drainage bag</label>
+<label><input type="radio" name="q63">A. Perform hand hygiene only</label>
+<label><input type="radio" name="q63">B. Wear gloves</label>
+<label><input type="radio" name="q63" onclick="show('r63')">C. Don N95 respirator</label>
+<label><input type="radio" name="q63">D. Ask patient to wear mask</label>
 </div>
+<div id="r63" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Don N95 respirator</div>
+<div class="rationale">Rationale: Airborne precautions require appropriate respiratory protection.</div>
+<button>Next</button>
 </div>
 
 <!-- Q64 -->
-<div class="question">
-<p>64. A patient experiences sudden chest pain and dizziness. What should be done immediately?</p>
+<div class="question"><b>Q64.</b> Patient on anticoagulant therapy has bleeding gums and dark stools. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q64" value="correct"> Assess ABC and activate emergency response</label>
-<label><input type="radio" name="q64"> Administer oral medication</label>
-<label><input type="radio" name="q64"> Notify physician</label>
-<label><input type="radio" name="q64"> Obtain ECG later</label>
+<label><input type="radio" name="q64">A. Provide oral care</label>
+<label><input type="radio" name="q64">B. Encourage fluids</label>
+<label><input type="radio" name="q64" onclick="show('r64')">C. Hold medication and notify provider</label>
+<label><input type="radio" name="q64">D. Document findings</label>
 </div>
+<div id="r64" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Hold medication and notify provider</div>
+<div class="rationale">Rationale: Signs of bleeding indicate possible anticoagulant overdose.</div>
+<button>Next</button>
 </div>
 
 <!-- Q65 -->
-<div class="question">
-<p>65. A patient has an alarm sounding on a medical device. What is the first action?</p>
+<div class="question"><b>Q65.</b> Patient reports sudden calf pain and swelling. Priority nursing action?</div>
 <div class="options">
-<label><input type="radio" name="q65" value="correct"> Assess the patient and equipment immediately</label>
-<label><input type="radio" name="q65"> Silence the alarm</label>
-<label><input type="radio" name="q65"> Notify biomedical team</label>
-<label><input type="radio" name="q65"> Document the alarm</label>
+<label><input type="radio" name="q65">A. Apply warm compress</label>
+<label><input type="radio" name="q65">B. Encourage ambulation</label>
+<label><input type="radio" name="q65" onclick="show('r65')">C. Keep patient on bed rest and notify provider</label>
+<label><input type="radio" name="q65">D. Massage affected area</label>
 </div>
+<div id="r65" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Keep patient on bed rest and notify provider</div>
+<div class="rationale">Rationale: Symptoms suggest DVT; movement may cause embolization.</div>
+<button>Next</button>
 </div>
 
 <!-- Q66 -->
-<div class="question">
-<p>66. A patient shows signs of aspiration. What is the priority nursing action?</p>
+<div class="question"><b>Q66.</b> Ventilator alarm sounds indicating high pressure. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q66" value="correct"> Position patient to protect airway</label>
-<label><input type="radio" name="q66"> Administer medication</label>
-<label><input type="radio" name="q66"> Notify physician</label>
-<label><input type="radio" name="q66"> Document event</label>
+<label><input type="radio" name="q66">A. Silence the alarm</label>
+<label><input type="radio" name="q66">B. Increase oxygen concentration</label>
+<label><input type="radio" name="q66" onclick="show('r66')">C. Assess patient and tubing for obstruction</label>
+<label><input type="radio" name="q66">D. Notify respiratory therapy</label>
 </div>
+<div id="r66" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess patient and tubing for obstruction</div>
+<div class="rationale">Rationale: High-pressure alarms often indicate airway or tubing obstruction.</div>
+<button>Next</button>
 </div>
 
 <!-- Q67 -->
-<div class="question">
-<p>67. A patient suddenly develops severe hypotension. What should be done first?</p>
+<div class="question"><b>Q67.</b> Patient receiving chemotherapy has temperature 38.9°C (102°F). First action?</div>
 <div class="options">
-<label><input type="radio" name="q67" value="correct"> Assess circulation and initiate emergency care</label>
-<label><input type="radio" name="q67"> Obtain laboratory results</label>
-<label><input type="radio" name="q67"> Notify physician</label>
-<label><input type="radio" name="q67"> Document vital signs</label>
+<label><input type="radio" name="q67">A. Administer antipyretic</label>
+<label><input type="radio" name="q67">B. Encourage fluids</label>
+<label><input type="radio" name="q67" onclick="show('r67')">C. Notify provider immediately</label>
+<label><input type="radio" name="q67">D. Recheck temperature later</label>
 </div>
+<div id="r67" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Notify provider immediately</div>
+<div class="rationale">Rationale: Fever in immunocompromised patients indicates possible sepsis.</div>
+<button>Next</button>
 </div>
 
 <!-- Q68 -->
-<div class="question">
-<p>68. A patient becomes unresponsive during care. What is the immediate action?</p>
+<div class="question"><b>Q68.</b> Patient suddenly complains of inability to breathe after tracheostomy care. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q68" value="correct"> Call for help and assess airway and breathing</label>
-<label><input type="radio" name="q68"> Obtain vital signs later</label>
-<label><input type="radio" name="q68"> Notify family</label>
-<label><input type="radio" name="q68"> Document event</label>
+<label><input type="radio" name="q68">A. Suction later</label>
+<label><input type="radio" name="q68">B. Reassure patient</label>
+<label><input type="radio" name="q68" onclick="show('r68')">C. Assess airway patency and remove inner cannula</label>
+<label><input type="radio" name="q68">D. Notify physician</label>
 </div>
+<div id="r68" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess airway patency and remove inner cannula</div>
+<div class="rationale">Rationale: Mucus plugging can cause acute airway obstruction.</div>
+<button>Next</button>
 </div>
 
 <!-- Q69 -->
-<div class="question">
-<p>69. A patient is placed in isolation precautions. What is the priority nursing action?</p>
+<div class="question"><b>Q69.</b> Patient complains of sudden severe abdominal pain and rigid abdomen. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q69" value="correct"> Perform hand hygiene and use appropriate PPE</label>
-<label><input type="radio" name="q69"> Educate family members</label>
-<label><input type="radio" name="q69"> Place isolation sign</label>
-<label><input type="radio" name="q69"> Document precautions</label>
+<label><input type="radio" name="q69">A. Give pain medication</label>
+<label><input type="radio" name="q69">B. Apply heating pad</label>
+<label><input type="radio" name="q69" onclick="show('r69')">C. Notify provider and prepare for emergency evaluation</label>
+<label><input type="radio" name="q69">D. Document pain score</label>
 </div>
+<div id="r69" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Notify provider and prepare for emergency evaluation</div>
+<div class="rationale">Rationale: Signs suggest acute abdomen requiring urgent intervention.</div>
+<button>Next</button>
 </div>
 
 <!-- Q70 -->
-<div class="question">
-<p>70. A patient is in a life-threatening condition. What is the nurse’s priority?</p>
+<div class="question"><b>Q70.</b> Patient with asthma develops wheezing and cannot complete sentences. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q70" value="correct"> Initiate immediate safety and emergency response</label>
-<label><input type="radio" name="q70"> Notify physician</label>
-<label><input type="radio" name="q70"> Reassure patient</label>
-<label><input type="radio" name="q70"> Document care</label>
+<label><input type="radio" name="q70">A. Obtain peak flow</label>
+<label><input type="radio" name="q70">B. Notify physician</label>
+<label><input type="radio" name="q70" onclick="show('r70')">C. Administer rapid-acting bronchodilator</label>
+<label><input type="radio" name="q70">D. Encourage slow breathing</label>
 </div>
+<div id="r70" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Administer rapid-acting bronchodilator</div>
+<div class="rationale">Rationale: Severe asthma exacerbation requires immediate bronchodilation.</div>
+<button>Next</button>
 </div>
-
-<!-- Q80 -->
-<div class="question">
-<p>5. An oxygen tubing becomes disconnected and the alarm is sounding. What should the nurse do first?</p>
+<div class="question"><b>Q81.</b> Patient suddenly becomes pale, diaphoretic, and hypotensive after IV medication. Priority action?</div>
 <div class="options">
-<label><input type="radio" name="q5" value="correct"> Reconnect the oxygen tubing immediately</label>
-<label><input type="radio" name="q5"> Silence the alarm</label>
-<label><input type="radio" name="q5"> Check the chart</label>
-<label><input type="radio" name="q5"> Report the incident</label>
+<label><input type="radio" name="q81">A. Slow infusion rate</label>
+<label><input type="radio" name="q81">B. Document reaction</label>
+<label><input type="radio" name="q81" onclick="show('r81')">C. Stop medication and assess airway and circulation</label>
+<label><input type="radio" name="q81">D. Reassure patient</label>
 </div>
+<div id="r81" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop medication and assess airway and circulation</div>
+<div class="rationale">Rationale: Sudden hypotension suggests severe adverse reaction requiring immediate intervention.</div>
+<button>Next</button>
 </div>
 
-<button type="button" onclick="submitTest()">Submit Test</button>
-</form>
+<!-- Q82 -->
+<div class="question"><b>Q82.</b> Patient on bed rest attempts to climb over side rails. Priority nursing action?</div>
+<div class="options">
+<label><input type="radio" name="q82">A. Apply restraints</label>
+<label><input type="radio" name="q82">B. Notify physician</label>
+<label><input type="radio" name="q82" onclick="show('r82')">C. Assist patient and ensure safe environment</label>
+<label><input type="radio" name="q82">D. Document behavior</label>
+</div>
+<div id="r82" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assist patient and ensure safe environment</div>
+<div class="rationale">Rationale: Immediate fall risk requires direct safety intervention.</div>
+<button>Next</button>
+</div>
 
-<div class="result" id="result"></div>
+<!-- Q83 -->
+<div class="question"><b>Q83.</b> Patient suddenly loses consciousness while standing. First action?</div>
+<div class="options">
+<label><input type="radio" name="q83">A. Obtain vital signs later</label>
+<label><input type="radio" name="q83">B. Call physician</label>
+<label><input type="radio" name="q83" onclick="show('r83')">C. Lower patient to floor and protect airway</label>
+<label><input type="radio" name="q83">D. Document event</label>
+</div>
+<div id="r83" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Lower patient to floor and protect airway</div>
+<div class="rationale">Rationale: Prevents injury and maintains airway during syncope.</div>
+<button>Next</button>
+</div>
+
+<!-- Q84 -->
+<div class="question"><b>Q84.</b> Patient reports chest tightness and has new wheezing after blood transfusion. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q84">A. Slow transfusion</label>
+<label><input type="radio" name="q84">B. Administer antihistamine later</label>
+<label><input type="radio" name="q84" onclick="show('r84')">C. Stop transfusion and maintain IV access</label>
+<label><input type="radio" name="q84">D. Document findings</label>
+</div>
+<div id="r84" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop transfusion and maintain IV access</div>
+<div class="rationale">Rationale: Suspected transfusion reaction requires immediate cessation.</div>
+<button>Next</button>
+</div>
+
+<!-- Q85 -->
+<div class="question"><b>Q85.</b> Patient develops sudden unilateral weakness and facial droop. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q85">A. Check blood pressure</label>
+<label><input type="radio" name="q85">B. Reorient patient</label>
+<label><input type="radio" name="q85" onclick="show('r85')">C. Activate stroke alert immediately</label>
+<label><input type="radio" name="q85">D. Document neurologic findings</label>
+</div>
+<div id="r85" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Activate stroke alert immediately</div>
+<div class="rationale">Rationale: Acute neurologic deficits require rapid intervention to reduce damage.</div>
+<button>Next</button>
+</div>
+
+<!-- Q86 -->
+<div class="question"><b>Q86.</b> Patient on oxygen therapy has SpO₂ 82% and cyanosis. First nursing action?</div>
+<div class="options">
+<label><input type="radio" name="q86">A. Notify physician</label>
+<label><input type="radio" name="q86">B. Obtain ABGs</label>
+<label><input type="radio" name="q86" onclick="show('r86')">C. Increase oxygen and assess airway</label>
+<label><input type="radio" name="q86">D. Document saturation</label>
+</div>
+<div id="r86" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Increase oxygen and assess airway</div>
+<div class="rationale">Rationale: Severe hypoxia requires immediate correction.</div>
+<button>Next</button>
+</div>
+
+<!-- Q87 -->
+<div class="question"><b>Q87.</b> Patient reports severe back pain during blood transfusion. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q87">A. Slow transfusion</label>
+<label><input type="radio" name="q87">B. Administer analgesic</label>
+<label><input type="radio" name="q87" onclick="show('r87')">C. Stop transfusion and notify provider</label>
+<label><input type="radio" name="q87">D. Document pain</label>
+</div>
+<div id="r87" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop transfusion and notify provider</div>
+<div class="rationale">Rationale: Severe back pain may indicate hemolytic reaction.</div>
+<button>Next</button>
+</div>
+
+<!-- Q88 -->
+<div class="question"><b>Q88.</b> Patient with COPD becomes increasingly drowsy and confused. First action?</div>
+<div class="options">
+<label><input type="radio" name="q88">A. Encourage sleep</label>
+<label><input type="radio" name="q88">B. Decrease oxygen flow</label>
+<label><input type="radio" name="q88" onclick="show('r88')">C. Assess respiratory status and ABGs</label>
+<label><input type="radio" name="q88">D. Notify physician</label>
+</div>
+<div id="r88" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess respiratory status and ABGs</div>
+<div class="rationale">Rationale: Altered mental status may indicate CO₂ retention.</div>
+<button>Next</button>
+</div>
+
+<!-- Q89 -->
+<div class="question"><b>Q89.</b> Patient complains of sudden vision loss in one eye. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q89">A. Reassure patient</label>
+<label><input type="radio" name="q89">B. Check blood glucose</label>
+<label><input type="radio" name="q89" onclick="show('r89')">C. Notify provider immediately</label>
+<label><input type="radio" name="q89">D. Document symptom</label>
+</div>
+<div id="r89" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Notify provider immediately</div>
+<div class="rationale">Rationale: Sudden vision loss suggests acute neurologic or vascular event.</div>
+<button>Next</button>
+</div>
+
+<!-- Q90 -->
+<div class="question"><b>Q90.</b> Patient found unresponsive with shallow breathing. First action?</div>
+<div class="options">
+<label><input type="radio" name="q90">A. Check blood pressure</label>
+<label><input type="radio" name="q90">B. Call physician</label>
+<label><input type="radio" name="q90" onclick="show('r90')">C. Open airway and support breathing</label>
+<label><input type="radio" name="q90">D. Document findings</label>
+</div>
+<div id="r90" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Open airway and support breathing</div>
+<div class="rationale">Rationale: Airway and breathing are immediate life priorities.</div>
+<button>Next</button>
+</div>
+
+<!-- Q91 -->
+<div class="question"><b>Q91.</b> Patient suddenly develops profuse bleeding from surgical site. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q91">A. Change dressing later</label>
+<label><input type="radio" name="q91">B. Document blood loss</label>
+<label><input type="radio" name="q91" onclick="show('r91')">C. Apply direct pressure and call for help</label>
+<label><input type="radio" name="q91">D. Obtain lab results</label>
+</div>
+<div id="r91" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply direct pressure and call for help</div>
+<div class="rationale">Rationale: Active hemorrhage requires immediate bleeding control.</div>
+<button>Next</button>
+</div>
+
+<!-- Q92 -->
+<div class="question"><b>Q92.</b> Patient becomes acutely agitated and hypoxic. First action?</div>
+<div class="options">
+<label><input type="radio" name="q92">A. Apply restraints</label>
+<label><input type="radio" name="q92">B. Administer sedative</label>
+<label><input type="radio" name="q92" onclick="show('r92')">C. Apply oxygen and assess airway</label>
+<label><input type="radio" name="q92">D. Notify provider</label>
+</div>
+<div id="r92" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply oxygen and assess airway</div>
+<div class="rationale">Rationale: Hypoxia may cause agitation and requires immediate correction.</div>
+<button>Next</button>
+</div>
+
+<!-- Q93 -->
+<div class="question"><b>Q93.</b> Patient receiving IV fluids has crackles and increasing shortness of breath. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q93">A. Increase IV rate</label>
+<label><input type="radio" name="q93">B. Encourage fluids</label>
+<label><input type="radio" name="q93" onclick="show('r93')">C. Stop infusion and elevate head of bed</label>
+<label><input type="radio" name="q93">D. Document findings</label>
+</div>
+<div id="r93" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop infusion and elevate head of bed</div>
+<div class="rationale">Rationale: Signs of fluid overload threaten respiratory status.</div>
+<button>Next</button>
+</div>
+
+<!-- Q94 -->
+<div class="question"><b>Q94.</b> Patient with seizure disorder begins tonic-clonic seizure. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q94">A. Insert oral airway</label>
+<label><input type="radio" name="q94">B. Restrain patient</label>
+<label><input type="radio" name="q94" onclick="show('r94')">C. Protect patient and maintain airway</label>
+<label><input type="radio" name="q94">D. Call family</label>
+</div>
+<div id="r94" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Protect patient and maintain airway</div>
+<div class="rationale">Rationale: Prevent injury and ensure airway during seizure.</div>
+<button>Next</button>
+</div>
+
+<!-- Q95 -->
+<div class="question"><b>Q95.</b> Patient suddenly complains of tearing chest pain radiating to back. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q95">A. Give analgesic</label>
+<label><input type="radio" name="q95">B. Obtain ECG</label>
+<label><input type="radio" name="q95" onclick="show('r95')">C. Notify provider and prepare for emergency care</label>
+<label><input type="radio" name="q95">D. Document pain</label>
+</div>
+<div id="r95" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Notify provider and prepare for emergency care</div>
+<div class="rationale">Rationale: Symptoms suggest aortic dissection.</div>
+<button>Next</button>
+</div>
+
+<!-- Q96 -->
+<div class="question"><b>Q96.</b> Patient found choking and unable to cough. First action?</div>
+<div class="options">
+<label><input type="radio" name="q96">A. Encourage coughing</label>
+<label><input type="radio" name="q96">B. Call physician</label>
+<label><input type="radio" name="q96" onclick="show('r96')">C. Perform abdominal thrusts</label>
+<label><input type="radio" name="q96">D. Give water</label>
+</div>
+<div id="r96" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Perform abdominal thrusts</div>
+<div class="rationale">Rationale: Complete airway obstruction requires immediate intervention.</div>
+<button>Next</button>
+</div>
+
+<!-- Q97 -->
+<div class="question"><b>Q97.</b> Patient receiving IV chemotherapy has extravasation at site. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q97">A. Slow infusion</label>
+<label><input type="radio" name="q97">B. Flush IV line</label>
+<label><input type="radio" name="q97" onclick="show('r97')">C. Stop infusion and follow extravasation protocol</label>
+<label><input type="radio" name="q97">D. Document finding</label>
+</div>
+<div id="r97" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Stop infusion and follow extravasation protocol</div>
+<div class="rationale">Rationale: Chemotherapy extravasation causes severe tissue injury.</div>
+<button>Next</button>
+</div>
+
+<!-- Q98 -->
+<div class="question"><b>Q98.</b> Patient with heart failure has sudden weight gain and ankle edema. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q98">A. Encourage fluids</label>
+<label><input type="radio" name="q98">B. Document weight</label>
+<label><input type="radio" name="q98" onclick="show('r98')">C. Assess fluid status and notify provider</label>
+<label><input type="radio" name="q98">D. Reassure patient</label>
+</div>
+<div id="r98" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess fluid status and notify provider</div>
+<div class="rationale">Rationale: Rapid weight gain indicates fluid overload.</div>
+<button>Next</button>
+</div>
+
+<!-- Q99 -->
+<div class="question"><b>Q99.</b> Patient suddenly becomes cyanotic with absent breath sounds on one side. Priority action?</div>
+<div class="options">
+<label><input type="radio" name="q99">A. Obtain chest X-ray</label>
+<label><input type="radio" name="q99">B. Notify physician</label>
+<label><input type="radio" name="q99" onclick="show('r99')">C. Apply oxygen and prepare for emergency intervention</label>
+<label><input type="radio" name="q99">D. Document findings</label>
+</div>
+<div id="r99" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Apply oxygen and prepare for emergency intervention</div>
+<div class="rationale">Rationale: Suspected pneumothorax threatens breathing.</div>
+<button>Next</button>
+</div>
+
+<!-- Q100 -->
+<div class="question"><b>Q100.</b> Patient collapses and is unresponsive in hallway. First action?</div>
+<div class="options">
+<label><input type="radio" name="q100">A. Check medical record</label>
+<label><input type="radio" name="q100">B. Call family</label>
+<label><input type="radio" name="q100" onclick="show('r100')">C. Assess responsiveness and activate emergency response</label>
+<label><input type="radio" name="q100">D. Document incident</label>
+</div>
+<div id="r100" style="display:none">
+<div class="status unsafe">⚠️ UNSAFE / CRITICAL</div>
+<div class="status">Wrong</div>
+<div class="status correct">Correct: Assess responsiveness and activate emergency response</div>
+<div class="rationale">Rationale: Collapse with unresponsiveness requires immediate life-saving response.</div>
+<button>Next</button>
+</div>
+<!-- Q6–Q20 continue with same rigor -->
+<p><i>Q6–Q20 will continue with unique scenarios covering neuro red flags, bleeding, infection control, escalation, equipment failure, and basic safety.</i></p>
 
 <script>
-function startTest() {
-  document.getElementById("test").style.display = "block";
-}
-
-function submitTest() {
-  let score = 0;
-  let unsafe = 0;
-  let correct = document.querySelectorAll('input[value="correct"]:checked').length;
-  let total = 5;
-  score = correct;
-  unsafe = total - correct;
-
-  document.getElementById("result").innerHTML =
-    "Name: " + document.getElementById("name").value +
-    "<br>Score: " + score + "/" + total +
-    "<br>Unsafe Errors: " + unsafe;
-}
+function show(id){ document.getElementById(id).style.display='block'; }
 </script>
 
 </body>
